@@ -1,0 +1,1 @@
+mongoimport --db aniladvantagedb --collection medicines --drop --file ./medicines_seed.json

@@ -1,0 +1,44 @@
+<section class="medicine-details">
+  <!-- new syntax for ng-if -->
+  <section *ngIf="medicine">
+    <section class="medicine-details__header">
+      <h2>You selected: {{medicine.name}}</h2>
+      <h3>Description</h3>
+      <p>
+        {{medicine.name}} weights {{medicine.weight}} and is {{medicine.height}} tall.
+      </p>
+    </section>
+    <section>
+      <form (ngSubmit)="saveMedicineDetails()" #medicineForm="ngForm">
+        <div>
+          <label for="name">Name: </label>
+          <!-- [(ngModel)] let's you do two-way data binding -->
+          <input [(ngModel)]="medicine.name" required ngControl="name" #name="ngForm">
+          <div [hidden]="name.valid || name.pristine" class="error">
+            Name is required
+          </div>
+        </div>
+        <div>
+          <label for="weight">Qty: </label>
+          <input [(ngModel)]="medicine.qty" ngControl="qty">
+        </div>
+        <div>
+          <label for="height">TotalCost: </label>
+          <input [(ngModel)]="medicine.totalcost" ngControl="totalcost">
+        </div>
+        <div>
+          <label for="profession">Profession:</label>
+          <select>
+            <option *ngFor="#profession of professions" [value]="profession">{{profession}}</option>
+          </select>
+        </div>
+        <button type="submit" [disabled]="!medicineForm.form.valid">Save</button>
+        <button type="button" (click)="gotoPeoplesList()">Back to peoples list</button>
+        <div [hidden]="!isSaving"> Saving... </div>
+      </form>
+    </section>
+  </section>
+  <section *ngIf="!medicine">
+    Loading...
+  </section>
+</section>

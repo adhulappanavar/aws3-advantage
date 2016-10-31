@@ -1,0 +1,221 @@
+
+
+
+
+
+<section class="med2patient-details">
+  <!-- new syntax for ng-if -->
+  <section *ngIf="med2patient">
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading" style='font-size:large'>
+    <div class="row">
+      <div class='col-md-6'>
+      <h4 style='font-size:large'>You selected:</h4>
+      <div class='col-md-4'> Name : {{med2patient.name}}</div>
+     
+      </div>
+      <div class='col-md-1 col-md-offset-4'>
+       <a class='btn btn-default' (click)='gotoPeoplesList()' style='width:80px'>
+            <i class='glyphicon glyphicon-chevron-left'></i> Back
+       </a>
+     </div>
+  </div>  
+  </div>
+</div>
+
+<div class='panel-body'>
+    <div class='row'>
+        <div class='col-md-6'>            
+            <div class="row">
+              <div style="background-color:#337ab7;padding:0px 2px 6px 7px;color:white;border-radius:5px;border-style: hidden">
+               <h4 align="center">Pick Medicines</h4>
+              <div >Filter by:
+              <span  style="color:black">
+                  <input type='text' [(ngModel)]='listFilter'/>
+               </span>
+               </div>
+               </div>
+            <div class="table-responsive">
+			         <table class="table table-striped">
+                  <thead> 
+                    <tr>
+                      <td>Medicine Name</td>
+                      <th></th>                      
+                    </tr>
+                  </thead>
+                  <tbody id="list1">
+                    <tr *ngFor="#medicine of actualmedicines | actualmedicinesFilter : listFilter">
+                         <td>{{medicine.name}}</td>
+                         <td><a (click)="addNewMedPatientList($event, medicine)">Add</a></td>
+                    </tr>
+                  </tbody>
+               </table>
+
+            </div><!--div class="table-responsive"-->
+            </div> <!-- Row in column 1-->
+        </div><!--div class='col-md-6'  End of Pick Medicine in FIrst column-->
+        <div class="col-md-6">
+          <div class="row">
+                      <div class="row">                                     
+                              <div align="center" style='font-size:large; color:#337ab7'><h2 style="color:#337ab7">Picked Medicines</h2></div>                                                   
+                              <div align="right">
+                                <a class='btn btn-primary'  (click)='onSaveFromNewMedicine2GivenMedicine($event, med2patient)' style='width:80px'>
+                                  Save           
+                                </a>
+                              </div>        
+                      </div>                             
+           
+                          <div class="table-responsive">
+                              <table class="table table-striped">
+                                  <thead>
+                                    <tr>
+                                      <th>Medicine Name</th>
+                                      <th>Qty</th>
+                                      <th>Cost</th>                                      
+                                      <th></th>                      
+                                    </tr>
+                                  </thead>
+                                  <tbody id="list1">
+                                    <tr *ngFor="#newmed2patientmedicine of med2patient.newmedicines;var index=index">
+                                        <td>{{newmed2patientmedicine.name}}</td>                                        
+                                        <td ><input [(ngModel)]="newmed2patientmedicine.qty" type="Number"></td>
+                                        <td ><input [(ngModel)]="newmed2patientmedicine.cost" type="Number"></td>                                        
+                                        <td><a (click)="deletefromNewMeds(index)">Delete</a></td>
+                                    </tr>
+                                  </tbody>
+                              </table>
+                            </div><!--div class="table-responsive"-->
+                           <div>            
+                              <div align="center" style='font-size:large'>Total New Med Cost : {{med2patient.newmedtotalcost}}</div>
+                          </div> 
+                           <br>
+                            <br>
+                          <div>            
+                              <div align="center" style='font-size:large;color:#337ab7'>Unbilled Medicine List</div>
+                          </div> 
+                          <div class="table-responsive">
+                                          <table class="table table-striped">
+                                              <thead>
+                                                <tr>
+                                                  <th>Medicine Name</th>
+                                                  <th>Qty</th>
+                                                  <th>Cost</th>                
+                                                </tr>
+                                              </thead>
+                                              <tbody id="list1">
+                                                <tr *ngFor="#med2patientmedicine of med2patient.medicines;var index=index">
+                                                    <td>{{med2patientmedicine.name}}</td>
+                                                    <td>{{med2patientmedicine.qty}}</td>
+                                                    <td>{{med2patientmedicine.cost}}</td>
+                                                    <td><a (click)="deletefromMeds(index)">Delete</a></td>
+                                                </tr>
+                                              </tbody>
+                                          </table>
+                          </div><!--div class="table-responsive"-->
+                           <div>            
+                              <div align="center" style='font-size:medium'>Total Unbilled Med Cost : {{med2patient.medtotalcost}}</div>
+                          </div> 
+            </div><!-- Row in column 1-->
+        </div><!--div class='col-md-6'End of Second column-->
+        <!--
+          <div>            
+               <div align="center" style='font-size:large'>Medicines Given Before</div>
+               <br>
+               
+              </div>                             
+           </div>
+          <div class="table-responsive">
+			    <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Medicine Name</th>
+                      <th>Quantity</th>
+                      <th>Cost</th>                      
+                    </tr>
+                  </thead>
+                  <tbody id="list1">
+                    <tr *ngFor="#med2patientmedicine of med2patient.medicines">
+                         <td>{{med2patientmedicine.name}}</td>
+                         <td>{{med2patientmedicine.qty}}</td>
+                         <td>{{med2patientmedicinee.cost}}</td>
+                    </tr>
+                  </tbody>
+               </table>
+            </div>
+        </div>
+        -->
+
+    </div><!--div class='row'-->
+</div> <!--div class='panel-body'-->
+
+
+
+<!--
+    <section class="med2patient-details__header">
+       <div class="container">
+        <div class="row">
+            <div class="col-sm-12" style="background-color:blue;">
+               <h6>You selected: {{med2patient.name}}</h6>
+               <h4> Name : {{med2patient.name}}  Patient Id : {{med2patient.patientid}} Weight : {{med2patient.weight}}  Height : {{med2patient.height}}
+              </h4>
+            </div>
+        </div>
+        </div>
+       </section>
+
+-->
+<!--
+    <div class="container">
+       <div class="col-md-12 text-center"><h3>Pick Medicines</h3></div>
+        <div class="row col-md-12 text-center">
+           
+                <div class="col-sm-4 col-sm-offset-1">
+                      <div class="list-group" id="list1">
+                          <ul class="medicines">
+                            <a href="#" class="list-group-item active">Master List <input title="toggle all" type="checkbox" class="all pull-right"></a>
+                              <li *ngFor="#medicine of medicines" >
+                                <a href="#" class="list-group-item">{{medicine.name}} <input type="checkbox" class="pull-right"></a>
+                                <a (click)="addNewMedPatientList($event, medicine)">Add</a>
+                            </li>
+                          </ul>                
+                      </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="list-group" id="list2">
+                          <ul class="med2patients_medicines">
+                              <a href="#" class="list-group-item active">Patients Medicine <input title="toggle all" type="checkbox" class="all pull-right"></a>
+                              <li *ngFor="#med2patientmedicine of med2patient.medicines" >
+                                      <a href="#" class="list-group-item">{{med2patientmedicine.name}}{{med2patientmedicine.qty}}
+                                      <input type="checkbox" class="pull-right"></a>
+                                      <div class="config">
+                                            <a (click)="onEdit($event, med2patientmedicine)">Edit</a>
+                                           <a (click)="onDelete($event, med2patientmedicinet)">Delete</a>
+                                      </div>
+                               </li>
+                          </ul>                
+                      </div>
+                      <div class="list-group" id="list3">
+                          <ul class="newmed2patients_newmedicines">
+                              <a href="#" class="list-group-item active">Patients New Medicine <input title="toggle all" type="checkbox" class="all pull-right"></a>
+                              <li *ngFor="#newmed2patientmedicine of med2patient.newmedicines" >
+                                      <a href="#" class="list-group-item">{{newmed2patientmedicine.name}}{{newmed2patientmedicine.qty}}
+                                      <input type="checkbox" class="pull-right"></a>
+                                      <div class="config">
+                                            <a (click)="onEdit($event, newmed2patientmedicine)">Edit</a>
+                                           <a (click)="onDelete($event, newmed2patientmedicinet)">Delete</a>
+                                      </div>
+                               </li>
+                          </ul>                
+                      </div>
+                </div>
+            
+        </div>
+    </div>
+-->
+  </section>
+  <section *ngIf="!med2patient">
+    Loading...
+  </section>
+</section>

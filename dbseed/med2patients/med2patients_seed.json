@@ -1,0 +1,104 @@
+    {
+      "name": "Pateint-1",
+      "patientid" : "ptnt1",
+      "height": "172",
+      "weight": "77",
+      "url": "http://swapi.co/api/people/1/",
+      "medicines" : [
+        {
+          "url" : "Pat 1 - Medicine Id 1",
+          "name" : "Pat 1 - Medicine Name 1",
+          "qty" : "Pat 1 - Med 1 Qty",
+          "totalcost" : 3000
+        },
+        {
+          "url" : "Pat 1 - Medicine Id 2",
+          "name" : "Pat 1 - Medicine Name 2",
+          "qty" : "Pat 1 - Med 2 Qty",
+          "totalcost" : 3000
+        }
+
+      ],
+            "newmedicines" : [
+        {
+          "url" : "Pat 1 - NewMedicine Id 1",
+          "name" : "Pat 1 - NewMedicine Name 1",
+          "qty" : "Pat 1 - NewMed 1 Qty",
+          "totalcost" : 3000
+        },
+        {
+          "url" : "Pat 1 - NewMedicine Id 2",
+          "name" : "Pat 1 - NewMedicine Name 2",
+          "qty" : "Pat 1 - NewMed 2 Qty",
+          "totalcost" : 3000
+        }
+
+      ]
+    }
+    {
+      "name": "Pateint-2",
+      "patientid" : "ptnt2",
+      "height": "167",
+      "weight": "75",
+      "url": "http://swapi.co/api/people/2/",
+            "medicines" : [
+        {
+          "url" : "Pat 2 - Medicine Id 1",
+          "name" : "Pat 2 - Medicine Name 1",
+          "qty" : "Pat 2 - Med 1 Qty",
+          "totalcost" : 3000
+        },
+        {
+          "url" : "Pat 2 - Medicine Id 2",
+          "name" : "Pat 2 - Medicine Name 2",
+          "qty" : "Pat 2 - Med 2 Qty",
+          "totalcost" : 3000
+        }
+
+      ]
+    }
+    {
+      "name": "Pateint-3",
+      "patientid" : "ptnt3",
+      "height": "96",
+      "weight": "32",
+      "url": "http://swapi.co/api/people/3/",
+            "medicines" : [
+        {
+          "url" : "Pat 3 - Medicine Id 1",
+          "name" : "Pat 3 - Medicine Name 1",
+          "qty" : "Pat 3 - Med 1 Qty",
+          "totalcost" : 3000
+        },
+        {
+          "url" : "Pat 3 - Medicine Id 2",
+          "name" : "Pat 3 - Medicine Name 2",
+          "qty" : "Pat 3 - Med 2 Qty",
+          "totalcost" : 3000
+        }
+
+      ]
+    }
+    {
+      "name": "Pateint-4",
+      "patientid" : "ptnt4",
+      "height": "202",
+      "weight": "136",
+      "url": "http://swapi.co/api/people/4/",
+            "medicines" : [
+        {
+          "url" : "Pat 4 - Medicine Id 1",
+          "name" : "Pat 4 - Medicine Name 1",
+          "qty" : "Pat 4 - Med 1 Qty",
+          "totalcost" : 3000
+        },
+        {
+          "url" : "Pat 4 - Medicine Id 2",
+          "name" : "Pat 4 - Medicine Name 2",
+          "qty" : "Pat 4 - Med 2 Qty",
+          "totalcost" : 3000
+        }
+
+      ]
+    }
+ 

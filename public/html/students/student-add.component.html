@@ -1,0 +1,33 @@
+<h1> HELLO </h1>
+<section class="student-details">
+  <!-- new syntax for ng-if -->
+  <section>
+    <section class="student-details__header">
+      <h2>Enter New Student : </h2>      
+    </section>
+    <section>
+      <form (ngSubmit)="saveNewStudentDetails()" #studentForm="ngForm">
+        <div>
+          <label for="name">Name: </label>
+          <!-- [(ngModel)] let's you do two-way data binding -->
+          <input [(ngModel)]="student.name" required ngControl="name" #name="ngForm">
+          <div [hidden]="name.valid || name.pristine" class="error">
+            Name is required
+          </div>
+        </div>
+        <div>
+          <label for="standard">standard: </label>
+          <input [(ngModel)]="student.standard" ngControl="standard">
+        </div>
+        <div>
+          <label for="schoolName">schoolName: </label>
+          <input [(ngModel)]="student.schoolName" ngControl="schoolName">
+        </div>        
+        <button type="submit" [disabled]="!studentForm.form.valid">Save</button>
+        <button type="button" (click)="gotoPeoplesList()">Back to peoples list</button>
+        <div [hidden]="isSaving"> Saving... </div>
+      </form>
+    </section>
+  </section>
+  
+</section>

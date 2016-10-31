@@ -1,0 +1,45 @@
+<h1> HI </h1>
+<section class="student-details">
+  <!-- new syntax for ng-if -->
+  <section *ngIf="student">
+    <section class="student-details__header">
+      <h2>You selected: {{student.name}}</h2>
+      <h3>Description</h3>
+      <p>
+        {{student.name}} standards {{student.standard}} and is {{student.schoolName}} tall.
+      </p>
+    </section>
+    <section>
+      <form (ngSubmit)="savestudentDetails()" #studentForm="ngForm">
+        <div>
+          <label for="name">Name: </label>
+          <!-- [(ngModel)] let's you do two-way data binding -->
+          <input [(ngModel)]="student.name" required ngControl="name" #name="ngForm">
+          <div [hidden]="name.valid || name.pristine" class="error">
+            Name is required
+          </div>
+        </div>
+        <div>
+          <label for="standard">standard: </label>
+          <input [(ngModel)]="student.standard" ngControl="standard">
+        </div>
+        <div>
+          <label for="schoolName">schoolName: </label>
+          <input [(ngModel)]="student.schoolName" ngControl="schoolName">
+        </div>
+        <div>
+          <label for="profession">Profession:</label>
+          <select>
+            <option *ngFor="#profession of professions" [value]="profession">{{profession}}</option>
+          </select>
+        </div>
+        <button type="submit" [disabled]="!studentForm.form.valid">Save</button>
+        <button type="button" (click)="gotoPeoplesList()">Back to peoples list</button>
+        <div [hidden]="!isSaving"> Saving... </div>
+      </form>
+    </section>
+  </section>
+  <section *ngIf="!student">
+    Loading...
+  </section>
+</section>

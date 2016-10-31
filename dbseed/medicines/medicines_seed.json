@@ -1,0 +1,60 @@
+    {
+      "name": "Medicine-1",
+      "qty": "172",
+      "totalcost": "77",
+      "url": "http://swapi.co/api/people/1/"
+    }
+    {
+      "name": "Medicine-2",
+      "qty": "167",
+      "totalcost": "75",
+      "url": "http://swapi.co/api/people/2/"
+    }
+    {
+      "name": "Medicine-3",
+      "qty": "96",
+      "totalcost": "32",
+      "url": "http://swapi.co/api/people/3/"
+    }
+    {
+      "name": "Medicine-4",
+      "qty": "202",
+      "totalcost": "136",
+      "url": "http://swapi.co/api/people/4/"
+    }
+    {
+      "name": "Leia Organa",
+      "qty": "150",
+      "totalcost": "49",
+      "url": "http://swapi.co/api/people/5/"
+    }
+    {
+      "name": "Owen Lars",
+      "qty": "178",
+      "totalcost": "120",
+      "url": "http://swapi.co/api/people/6/"
+    }
+    {
+      "name": "Beru Whitesun lars",
+      "qty": "165",
+      "totalcost": "75",
+      "url": "http://swapi.co/api/people/7/"
+    }
+    {
+      "name": "R5-D4",
+      "qty": "97",
+      "totalcost": "32",
+      "url": "http://swapi.co/api/people/8/"
+    }
+    {
+      "name": "Biggs Darklighter",
+      "qty": "183",
+      "totalcost": "84",
+      "url": "http://swapi.co/api/people/9/"
+    }
+    {
+      "name": "Obi-Wan Kenobi",
+      "qty": "182",
+      "totalcost": "77",
+      "url": "http://swapi.co/api/people/10/"
+    }

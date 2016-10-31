@@ -1,0 +1,1 @@
+mongoimport --db aniladvantagedb --collection peoples --drop --file ./people_seed.json
