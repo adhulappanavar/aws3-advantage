@@ -8,7 +8,7 @@ import { Actualmedicine } from '../actualmedicines/actualmedicine';
 @Injectable()
 export class ActualmedicinesService{
   //private baseUrl: string = 'http://swapi.co/api';
-    private baseUrl: string = 'http://localhost:3000';
+    private baseUrl: string = 'http://localhost:9000';
 
   constructor(private http : Http){}
 

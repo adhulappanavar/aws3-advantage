@@ -8,8 +8,8 @@ import { Actualpatient } from '../actualpatients/actualpatient';
 @Injectable()
 export class ActualpatientsService{
   //private baseUrl: string = 'http://swapi.co/api';
-    private baseUrl: string = 'http://localhost:3000';
-//    private baseUrl: string = 'http://192.168.1.104:3000';
+    private baseUrl: string = 'http://localhost:9000';
+//    private baseUrl: string = 'http://192.168.1.104:9000';
 
   med2patient;
   constructor(private http : Http ){}

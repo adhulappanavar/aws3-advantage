@@ -55,7 +55,7 @@ gulp.task('restorelocalhostservice', function() {
 
 gulp.task('prodserver', function(){
   gulp.src(devbackupFolder+'/**/*')
-    .pipe(replace('http://localhost:3000', 'http://'+ getServerIp() + ':3000'))
+    .pipe(replace('http://localhost:9000', 'http://'+ getServerIp() + ':9000'))
     .pipe(gulp.dest(devFolder));
 });
 

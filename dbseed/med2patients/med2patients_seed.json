@@ -9,13 +9,13 @@
           "url" : "Pat 1 - Medicine Id 1",
           "name" : "Pat 1 - Medicine Name 1",
           "qty" : "Pat 1 - Med 1 Qty",
-          "totalcost" : 3000
+          "totalcost" : 9000
         },
         {
           "url" : "Pat 1 - Medicine Id 2",
           "name" : "Pat 1 - Medicine Name 2",
           "qty" : "Pat 1 - Med 2 Qty",
-          "totalcost" : 3000
+          "totalcost" : 9000
         }
 
       ],
@@ -24,13 +24,13 @@
           "url" : "Pat 1 - NewMedicine Id 1",
           "name" : "Pat 1 - NewMedicine Name 1",
           "qty" : "Pat 1 - NewMed 1 Qty",
-          "totalcost" : 3000
+          "totalcost" : 9000
         },
         {
           "url" : "Pat 1 - NewMedicine Id 2",
           "name" : "Pat 1 - NewMedicine Name 2",
           "qty" : "Pat 1 - NewMed 2 Qty",
-          "totalcost" : 3000
+          "totalcost" : 9000
         }
 
       ]
@@ -46,13 +46,13 @@
           "url" : "Pat 2 - Medicine Id 1",
           "name" : "Pat 2 - Medicine Name 1",
           "qty" : "Pat 2 - Med 1 Qty",
-          "totalcost" : 3000
+          "totalcost" : 9000
         },
         {
           "url" : "Pat 2 - Medicine Id 2",
           "name" : "Pat 2 - Medicine Name 2",
           "qty" : "Pat 2 - Med 2 Qty",
-          "totalcost" : 3000
+          "totalcost" : 9000
         }
 
       ]
@@ -68,13 +68,13 @@
           "url" : "Pat 3 - Medicine Id 1",
           "name" : "Pat 3 - Medicine Name 1",
           "qty" : "Pat 3 - Med 1 Qty",
-          "totalcost" : 3000
+          "totalcost" : 9000
         },
         {
           "url" : "Pat 3 - Medicine Id 2",
           "name" : "Pat 3 - Medicine Name 2",
           "qty" : "Pat 3 - Med 2 Qty",
-          "totalcost" : 3000
+          "totalcost" : 9000
         }
 
       ]
@@ -90,13 +90,13 @@
           "url" : "Pat 4 - Medicine Id 1",
           "name" : "Pat 4 - Medicine Name 1",
           "qty" : "Pat 4 - Med 1 Qty",
-          "totalcost" : 3000
+          "totalcost" : 9000
         },
         {
           "url" : "Pat 4 - Medicine Id 2",
           "name" : "Pat 4 - Medicine Name 2",
           "qty" : "Pat 4 - Med 2 Qty",
-          "totalcost" : 3000
+          "totalcost" : 9000
         }
 
       ]
