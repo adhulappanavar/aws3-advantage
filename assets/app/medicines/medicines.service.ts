@@ -8,7 +8,7 @@ import { Medicine } from '../medicines/medicine';
 @Injectable()
 export class MedicinesService{
   //private baseUrl: string = 'http://swapi.co/api';
-    private baseUrl: string = 'http://ec2-35-154-3-60.ap-south-1.compute.amazonaws.com:9000';
+    private baseUrl: string = 'http://ec2-35-154-8-81.ap-south-1.compute.amazonaws.com:9000';
 
   constructor(private http : Http){}
 

@@ -55,7 +55,7 @@ gulp.task('restorelocalhostservice', function() {
 
 gulp.task('prodserver', function(){
   gulp.src(devbackupFolder+'/**/*')
-    .pipe(replace('http://ec2-35-154-3-60.ap-south-1.compute.amazonaws.com:9000', 'http://'+ getServerIp() + ':9000'))
+    .pipe(replace('http://ec2-35-154-8-81.ap-south-1.compute.amazonaws.com:9000', 'http://'+ getServerIp() + ':9000'))
     .pipe(gulp.dest(devFolder));
 });
 

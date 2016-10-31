@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var jwt = require('jsonwebtoken');
 
+
 var Actualpatients = require('../models/actualpatients');
 var Med2patients = require('../models/med2patients');
 
